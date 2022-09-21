@@ -1,0 +1,35 @@
+from nextcord.ext import commands
+import requests, json, random, datetime, asyncio
+import discord
+
+bot = commands.Bot(command_prefix="Water ")
+
+
+@bot.command(name="hi")
+async def SendMessage(ctx):
+    await ctx.send('Hello!')
+
+
+async def schedule_daily_message():
+    while True:
+        now = datetime.datetime.now()
+        #then = now+datetime.timedelta(days=0)
+        then = now.replace(hour=15, minute=1)
+        wait_time = (then - now).total_seconds()
+        await asyncio.sleep(wait_time)
+
+        channel = bot.get_channel(931040113146871822)
+
+        await channel.send("Heyy Kiv have some water")
+
+
+@bot.event
+async def on_ready():
+    print(f"Loggined in as: {bot.user.name}")
+    await schedule_daily_message()
+
+
+if __name__ == '__main__':
+    bot.run(
+        "MTAyMjEzNDE1ODg4MzAzMzI0MA.GpBqkz.IXai0jt0M2RbR6nIGsq2DnYjXpwXyCeh12r9nw"
+    )
