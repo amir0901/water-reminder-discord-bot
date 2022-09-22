@@ -5,7 +5,8 @@ import os
 
 
 bot = commands.Bot(command_prefix="Water ")
-
+with open('image.png', 'rb') as image:
+    await bot.user.edit(avatar=image)
 
 @bot.command(name="hi")
 async def SendMessage(ctx):
