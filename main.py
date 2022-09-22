@@ -29,7 +29,8 @@ async def schedule_daily_message():
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
-    discord.Activity(type=discord.ActivityType.watching, name="name of the movie")
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
+
 
 
 if __name__ == '__main__':
