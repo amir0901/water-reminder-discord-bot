@@ -1,0 +1,4 @@
+nextcord.ext 
+requests, json, random, datetime, asyncio
+discord
+os

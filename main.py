@@ -1,6 +1,7 @@
 from nextcord.ext import commands
 import requests, json, random, datetime, asyncio
 import discord
+import os
 
 bot = commands.Bot(command_prefix="Water ")
 
@@ -30,6 +31,4 @@ async def on_ready():
 
 
 if __name__ == '__main__':
-    bot.run(
-        "MTAyMjEzNDE1ODg4MzAzMzI0MA.GpBqkz.IXai0jt0M2RbR6nIGsq2DnYjXpwXyCeh12r9nw"
-    )
+    bot.run(os.environ['DISCORD_TOKEN'])
