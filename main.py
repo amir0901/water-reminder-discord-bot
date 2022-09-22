@@ -28,6 +28,7 @@ async def schedule_daily_message():
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
+    await client.change_presence(activity=discord.Game('hi'))
 
 
 if __name__ == '__main__':
