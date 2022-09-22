@@ -4,7 +4,7 @@ import discord
 import os
 
 
-bot = commands.Bot(command_prefix="/")
+bot = commands.Bot(command_prefix="Water ")
 
 
 @bot.command(name="hi")
@@ -29,7 +29,6 @@ async def schedule_daily_message():
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
 
 
 
