@@ -2,9 +2,7 @@ from nextcord.ext import commands
 import requests, json, random, datetime, asyncio
 import discord
 import os
-from discord.ext import tasks, commands
-from discord.ext.commands import Bot
-from discord.ext.commands import Context
+
 
 bot = commands.Bot(command_prefix="/")
 
