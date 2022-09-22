@@ -1,3 +1,4 @@
 discord
 nextcord
 requests
+discord.ext
