@@ -49,6 +49,7 @@ async def schedule_daily_message3():
 
         await channel.send("You are cute and mine kiv - mish")
         
+   
 @bot.event
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
