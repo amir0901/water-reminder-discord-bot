@@ -18,7 +18,7 @@ async def schedule_daily_message():
         #then = now+datetime.timedelta(days=0)
         then = now.replace(hour=15, minute=1)
         wait_time = (then - now).total_seconds()
-        await asyncio.sleep(wait_time)
+        await asyncio.sleep(15)
 
         channel = bot.get_channel(931040113146871822)
 
