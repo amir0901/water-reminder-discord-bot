@@ -2,6 +2,9 @@ from nextcord.ext import commands
 import requests, json, random, datetime, asyncio
 import discord
 import os
+from discord.ext import tasks, commands
+from discord.ext.commands import Bot
+from discord.ext.commands import Context
 
 bot = commands.Bot(command_prefix="/")
 
@@ -28,7 +31,7 @@ async def schedule_daily_message():
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Some Custom Beats'))
+    discord.Activity(type=discord.ActivityType.watching, name="name of the movie")
 
 
 if __name__ == '__main__':
