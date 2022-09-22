@@ -5,8 +5,7 @@ import os
 
 
 bot = commands.Bot(command_prefix="Water ")
-with open('image.png', 'rb') as image:
-    await bot.user.edit(avatar=image)
+
 
 @bot.command(name="hi")
 async def SendMessage(ctx):
@@ -30,6 +29,8 @@ async def schedule_daily_message():
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
+    with open('image.png', 'rb') as image:
+    await bot.user.edit(avatar=image)
 
 
 
