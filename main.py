@@ -26,11 +26,13 @@ async def schedule_daily_message():
 
 
 @bot.event
+with open('image.png', 'rb') as image:
+    await bot.user.edit(avatar=image) 
+    
 async def on_ready():
     print(f"Loggined in as: {bot.user.name}")
     await schedule_daily_message()
-with open('image.png', 'rb') as image:
-    await bot.user.edit(avatar=image)
+
 
 
 if __name__ == '__main__':
