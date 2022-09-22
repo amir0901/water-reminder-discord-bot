@@ -16,7 +16,7 @@ async def schedule_daily_message():
     while True:
         now = datetime.datetime.now()
         #then = now+datetime.timedelta(days=0)
-        then = now.replace(hour=1, minute=1)
+        then = now.replace(hour=15, minute=1)
         wait_time = (then - now).total_seconds()
         await asyncio.sleep(wait_time)
 
