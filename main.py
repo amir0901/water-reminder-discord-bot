@@ -3,7 +3,7 @@ import requests, json, random, datetime, asyncio
 import discord
 import os
 
-bot = commands.Bot(command_prefix="Water ")
+bot = commands.Bot(command_prefix="/")
 
 
 @bot.command(name="hi")
